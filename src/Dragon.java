@@ -46,8 +46,4 @@ public class Dragon {
         }
         return true;
     }
-
-    public int calculateRandomDamage() {
-        return (int) (Math.random() * 10) + 1;
-    }
 }

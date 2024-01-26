@@ -43,7 +43,7 @@ public class Castle {
 
             roomVisits++;
 
-        } else { // only avaliable if princess went to 5+ rooms
+        } else { // only open if princess went to 5+ rooms
             printWithDelay(ConsoleUtility.PURPLE + "\uD83D\uDC78: Should we go left, middle, right, or the exit?", 1);
             int roomExitDirection = getUserChoice("1. Left\n2. Middle\n3. Right\n4. Exit");
 
