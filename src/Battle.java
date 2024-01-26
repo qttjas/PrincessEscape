@@ -1,7 +1,7 @@
 public class Battle {
 
     public static void startBattle(Princess princess, Dragon dragon) {
-        System.out.println("\uD83D\uDC64: Battle started against a dragon" + "!");
+        System.out.println("\uD83D\uDC64: Battle started against a dragon" + "!"); // battle started
 
         while (princess.getHealth() > 0 && dragon.getHealth() > 0) {
             princessAttack(princess, dragon);
@@ -11,7 +11,8 @@ public class Battle {
         }
 
         if (princess.getHealth() <= 0) {
-            System.out.println(ConsoleUtility.CYAN + "\uD83D\uDC64: The princess was defeated by the dragons. (IF THE PRINCESS IS DEAD, GAME OVER)");
+            System.out.println(ConsoleUtility.CYAN + "\uD83D\uDC64: The princess was defeated by the dragons.");
+            System.exit(0); // ends if princess dies
         } else {
             handleDragonDrop(princess, dragon);
         }

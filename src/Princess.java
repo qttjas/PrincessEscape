@@ -45,9 +45,7 @@ public class Princess {
 
     public void receiveDamage(int damage) {
         health -= damage;
-        if (health <= 0) {
-            System.out.println("Princess has been defeated!");
-        }
+
     }
 }
 

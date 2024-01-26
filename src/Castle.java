@@ -13,7 +13,7 @@ public class Castle {
         return scanner.nextInt();
     }
 
-    public void start() {
+    public void start() { // dialogue
         printWithDelay(ConsoleUtility.CYAN + "\uD83D\uDC64: Hello, you're the " + ConsoleUtility.PURPLE + "princess" + ConsoleUtility.CYAN + " of the castle \uD83C\uDFF0!!", 1);
         ConsoleUtility.clearScreen();
         printWithDelay(ConsoleUtility.CYAN + "\uD83D\uDC64: Not anymore though because you have to " + ConsoleUtility.BLUE + "escape" + ConsoleUtility.CYAN + " the place \uD83D\uDE08...", 1);
@@ -43,7 +43,7 @@ public class Castle {
 
             roomVisits++;
 
-        } else {
+        } else { // only avaliable if princess went to 5+ rooms
             printWithDelay(ConsoleUtility.PURPLE + "\uD83D\uDC78: Should we go left, middle, right, or the exit?", 1);
             int roomExitDirection = getUserChoice("1. Left\n2. Middle\n3. Right\n4. Exit");
 
@@ -84,7 +84,7 @@ public class Castle {
     }
 
 
-    private void handleDragonRoom() {
+    private void handleDragonRoom() { // battle
         Dragon[] dragons = new Dragon[1];
         dragons[0] = new Dragon("Dragon");
 
@@ -102,7 +102,7 @@ public class Castle {
         }
     }
 
-    private void handleGuardRoom() {
+    private void handleGuardRoom() { // first question
         printWithDelay(ConsoleUtility.CYAN + "\uD83D\uDC64: Guards are approaching! You must avoid being seen.", 1);
         printWithDelay(ConsoleUtility.PURPLE + "\uD83D\uDC78: No way, the guards…", 1);
         printWithDelay(ConsoleUtility.CYAN + "\uD83D\uDC64: If they see you, it’s over!", 1);
@@ -118,7 +118,7 @@ public class Castle {
         }
     }
 
-    private void askGuardQuestion() {
+    private void askGuardQuestion() { // second question
         printWithDelay(ConsoleUtility.CYAN + "\uD83D\uDC64: “GUARDS! I think I can sense someone through my third eye” is what you heard. You quickly…", 1);
 
         int choice = getUserChoice("1. SCREAM\n2. Pray that you’re not caught\n3. Blend in the background");
@@ -133,7 +133,7 @@ public class Castle {
         }
     }
 
-    private void handleEmptyRoom() {
+    private void handleEmptyRoom() { // if chosen option 3
         printWithDelay(ConsoleUtility.CYAN + "\uD83D\uDC64: You enter an empty room. Nothing seems to be here.", 1);
         printWithDelay(ConsoleUtility.CYAN + "\uD83D\uDC64: What would you like to do?", 1);
 
@@ -164,6 +164,6 @@ public class Castle {
         printWithDelay(ConsoleUtility.PURPLE + "\uD83D\uDC78: Is that the sun? I haven’t seen sunlight in 5 years!", 2);
         printWithDelay(ConsoleUtility.PURPLE + "\uD83D\uDC78: I NEED TO TOUCH GRASS RIGHT NOW.", 2);
         printWithDelay(ConsoleUtility.PURPLE + "\uD83D\uDC78: I’M FREE. I’M FREE!!", 2);
-        System.exit(0);
+        System.exit(0); // ends
     }
 }
